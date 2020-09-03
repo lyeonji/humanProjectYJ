@@ -1,10 +1,10 @@
 package DTO;
 
 public class Data {
-	int no;
-	String title;
-	String url;
-	String text;
+	int no;	// 데이터 번호
+	String title;	// 검색어
+	String url;	// 링크 (없는 경우도 있음)
+	String text;	// 설명
 	
 	public int getNo() {
 		return no;
