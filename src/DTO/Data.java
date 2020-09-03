@@ -1,6 +1,6 @@
 package DTO;
 
-public class SearchData {
+public class Data {
 	int no;
 	String title;
 	String url;
