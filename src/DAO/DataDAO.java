@@ -41,8 +41,6 @@ public class DataDAO extends DAOBase {
 				try {
 					if (conn != null)
 						conn.close();
-					if (rs != null)
-						rs.close();
 					if (st != null)
 						st.close();
 				} catch (Exception e) {
@@ -54,16 +52,15 @@ public class DataDAO extends DAOBase {
 	}
 
 	public void insert(Data newData) {
-		String sql = "insert into data values(?, ?, ?, ?)";
+		String sql = "insert into data values(data_seq.nextVal, ?, ?, ?)";
 		PreparedStatement ppst = null;
 
 		if (conn() != null) {
 			try {
 				ppst = conn.prepareStatement(sql);
-				ppst.setInt(1, newData.getNo());
-				ppst.setString(2, newData.getTitle());
-				ppst.setString(3, newData.getUrl());
-				ppst.setString(4, newData.getText());
+				ppst.setString(1, newData.getTitle());
+				ppst.setString(2, newData.getUrl());
+				ppst.setString(3, newData.getText());
 				ppst.executeUpdate();
 			} catch (Exception e) {
 				System.out.println("insert 오류");
@@ -88,6 +85,7 @@ public class DataDAO extends DAOBase {
 			try {
 				ppst = conn.prepareStatement(sql);
 				ppst.setString(1, delData.getTitle());
+				ppst.executeQuery();
 			} catch (Exception e) {
 				System.out.println("delete 오류");
 			} finally {
