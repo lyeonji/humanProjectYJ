@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 public class DAOBase {
 	protected Connection conn = null;
 	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url = "jdbc:oracle:thin:@175.204.61.164:1521:orcl";
+	private String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private String user = "system";
 	private String password = "1104";
 	protected ResultSet rs = null;
