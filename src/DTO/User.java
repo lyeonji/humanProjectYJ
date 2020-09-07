@@ -41,4 +41,11 @@ public class User {
 		this.b_date = b_date;
 	}
 	
+	public void prtUserInfo() {
+		System.out.print("User No : " + no);
+		System.out.print(" / ID : " + id);
+		System.out.print(" / Password : " + pw);
+		System.out.print(" / Nick : " + nick);
+		System.out.println(" / Join Date : " + b_date);
+	}
 }
