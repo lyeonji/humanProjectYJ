@@ -2,6 +2,8 @@ package Main;
 
 import java.util.Scanner;
 
+import client.Home;
+
 public class Index {
 	public static Scanner in=new Scanner(System.in);
 	
