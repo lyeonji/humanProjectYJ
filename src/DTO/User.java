@@ -1,12 +1,21 @@
 package DTO;
 
-//	DB table¸í: siteUser
+import java.sql.Timestamp;
+
+//	DB table¸í: b_user
 public class User {
-	String id;
-	String pw;
-	String name;
-	String nick;
+	private int no;
+	private String id;
+	private String pw;
+	private String nick;
+	private Timestamp b_date;
 	
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
 	public String getId() {
 		return id;
 	}
@@ -19,16 +28,17 @@ public class User {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public String getNick() {
 		return nick;
 	}
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
+	public Timestamp getB_date() {
+		return b_date;
+	}
+	public void setB_date(Timestamp b_date) {
+		this.b_date = b_date;
+	}
+	
 }
